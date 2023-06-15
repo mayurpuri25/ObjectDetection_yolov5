@@ -1,11 +1,9 @@
 from io import BytesIO
-from flask import Flask, render_template, request, url_for
-import numpy as np
-import matplotlib.pyplot as plt
+from flask import Flask, render_template, request
 import requests
 import torch
 from PIL import Image
-from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+from azure.storage.blob import BlobServiceClient
 import os
 
 app = Flask(__name__)
