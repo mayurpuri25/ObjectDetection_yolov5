@@ -54,7 +54,7 @@ def predict():
         # Create a BytesIO object from the response content
         image_data = BytesIO(response.content)
 
-        model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+        model = torch.hub.load('ultralytics/yolov5', 'yolov5s', trust_repo=True)
 
         # Open the image with PIL
         im1 = Image.open(image_data)
